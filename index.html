@@ -8,141 +8,125 @@
 </head>
 
 <body>
-	<div class="page-wrapper">
-		<div class="container">
-			<section class="top-menu">
-				<a class="logo" href="/">PINK</a>
-				<span class="burger">Меню</span>
-				<ul>
-					<li><a href="#">Информация</a></li>
-					<li><a href="#">Возможности</a></li>
-					<li><a href="#">Отзывы</a></li>
-					<li><a href="#">Стоимость</a></li>
-				</ul>
-			</section>
+	<section class="top-menu">
+		<a class="logo" href="/">PINK</a>
+		<span class="burger">Меню</span>
+		<ul class="list">
+			<li class="item"><a class="link" href="#">Информация</a></li>
+			<li class="item"><a class="link" href="#">Возможности</a></li>
+			<li class="item"><a class="link" href="#">Отзывы</a></li>
+			<li class="item"><a class="link" href="#">Стоимость</a></li>
+		</ul>
+	</section>
 
-			<section class="intro">
-				<h1>Взгляните на жизнь иначе!</h1>
-			</section>
+	<section class="intro">
+		<h1 class="section-title">Взгляните на жизнь иначе!</h1>
+	</section>
 
-			<section class="download">
-				<h1>Скачать приложение</h1>
-				<ul>
-					<li><a href="#">AppStore</a></li>
-					<li><a href="#">PlayMarket</a></li>
-					<li><a href="#">WindowsPhoneStore (Так он называется?)</a></li>
-				</ul>
-				<p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-			</section>
+	<section class="download">
+		<h1 class="section-title">Скачать приложение</h1>
+		<ul class="list">
+			<li class="item"><a class="link" href="#">AppStore</a></li>
+			<li class="item"><a class="link" href="#">PlayMarket</a></li>
+			<li class="item"><a class="link" href="#">WindowsPhoneStore</a></li>
+		</ul>
+		<p>Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8</p>
+	</section>
 
-			<section class="information">
-				<h1>Устали от серости мегаполиса?<br/>Нам есть, что вам предложить!</h1>
-				<ul>
-					<li>
-						<h2>Поднимает настроение</h2>
-						<p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
-					</li>
-					<li>
-						<h2>Меняет мир вокруг</h2>
-						<p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-					</li>
-					<li>
-						<h2>Заводит новых друзей</h2>
-						<p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-					</li>
-				</ul>
+	<section class="information">
+		<h1 class="section-title">Устали от серости мегаполиса?<br/>Нам есть, что вам предложить!</h1>
+		<ul class="list">
+			<li class="item">
+				<h2 class="title">Поднимает настроение</h2>
+				<p class="text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+			</li>
+			<li class="item">
+				<h2 class="title">Меняет мир вокруг</h2>
+				<p class="text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+			</li>
+			<li class="item">
+				<h2 class="title">Заводит новых друзей</h2>
+				<p class="text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+			</li>
+		</ul>
 
-				<div class="promo-phone">
-					<img src="https://api.fnkr.net/testimg/100x100/D41458/FFF/?text=Phone" alt="Очень симпотичный телефон">
-				</div>
-			</section>
-
-			<section class="review">
-				<ul class="items">
-					<li class="active" id="review_1">
-						<p class="name">Николай Петров</p>
-						<p class="message">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-					</li>
-					<li id="review_2">
-						<p class="name">Иван Иванов</p>
-						<p class="message">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-					</li>
-					<li id="review_3">
-						<p class="name">Василий Пупкин</p>
-						<p class="message">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-					</li>
-				</ul>
-				<ul class="bullets">
-					<li><a class="active" href="#review_1">Николай Петров</a></li>
-					<li><a href="#review_2">Иван Иванов</a></li>
-					<li><a href="#review_3">Василий Пупкин</a></li>
-				</ul>
-			</section>
-
-			<section class="price">
-				<ul class="items">
-					<li class="active" id="base">
-						<div class="hedaer">
-							<h2>База</h2>
-							<div class="price">1,99 USD</div>
-						</div>
-						<div class="list">
-							<div class="row  include">Розовый фильтр</div>
-							<div class="row  exclude">Смайлики</div>
-							<div class="row  exclude">Комментарии</div>
-						</div>
-					</li>
-					<li id="standart">
-						<div class="hedaer">
-							<h2>Стандарт</h2>
-							<div class="price">3,99 USD</div>
-						</div>
-						<div class="list">
-							<div class="row  include">Розовый фильтр</div>
-							<div class="row  include">Смайлики</div>
-							<div class="row  exclude">Комментарии</div>
-						</div>
-					</li>
-					<li id="unlim">
-						<div class="hedaer">
-							<h2>Анлим</h2>
-							<div class="price">9,99 USD</div>
-						</div>
-						<div class="list">
-							<div class="row  include">Розовый фильтр</div>
-							<div class="row  include">Смайлики</div>
-							<div class="row  include">Комментарии</div>
-						</div>
-					</li>
-				</ul>
-
-				<ul class="bullets">
-					<li><a class="active" href="#base">База</a></li>
-					<li><a href="#standart">Стандарт</a></li>
-					<li><a href="#unlim">Анлим</a></li>
-				</ul>
-			</section>
-
-			<section class="contacts">
-				<h1 class="section-title">Остались вопросы?<br/>Свяжитесь с нами!</h1>
-				<ul>
-					<li>
-						<div class="title">Звоните:</div>
-						<div class="value">+7 (812) 555-66-66</div>
-					</li>
-					<li>
-						<div class="title">Пишите</div>
-						<div class="value">mail@htmlacademy.ru</div>
-					</li>
-					<li>
-						<div class="title">Приезжайте в гости</div>
-						<div class="value">ул. Большая Конюшенная, 19/8</div>
-					</li>
-				</ul>
-				<div class="map">Тут будет карта</div>
-			</section>
+		<div class="promo-phone">
+			<img src="https://api.fnkr.net/testimg/100x100/D41458/FFF/?text=Phone" alt="Очень симпатичный телефон">
 		</div>
-	</div>
+	</section>
+
+	<section class="review">
+		<ul class="list">
+			<li class="item  active">
+				<p class="name">Николай Петров</p>
+				<p class="message">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+			</li>
+			<li class="item">
+				<p class="name">Иван Иванов</p>
+				<p class="message">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+			</li>
+			<li class="item">
+				<p class="name">Василий Пупкин</p>
+				<p class="message">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+			</li>
+		</ul>
+	</section>
+
+	<section class="prices">
+		<section class="price">
+			<header class="header">
+				<h2 class="title">База</h2>
+				<div class="price">1,99 USD</div>
+			</header>
+			<ul class="list">
+				<div class="item  include">Розовый фильтр</div>
+				<div class="item  exclude">Смайлики</div>
+				<div class="item  exclude">Комментарии</div>
+			</ul>
+		</section>
+		<section class="price">
+			<header class="header">
+				<h2 class="title">Стандарт</h2>
+				<div class="price">3,99 USD</div>
+			</header>
+			<ul class="list">
+				<div class="item  include">Розовый фильтр</div>
+				<div class="item  include">Смайлики</div>
+				<div class="item  exclude">Комментарии</div>
+			</ul>
+		</section>
+		<section class="price">
+			<header class="header">
+				<h2 class="title">Анлим</h2>
+				<div class="price">9,99 USD</div>
+			</header>
+			<ul class="list">
+				<div class="item  include">Розовый фильтр</div>
+				<div class="item  include">Смайлики</div>
+				<div class="item  include">Комментарии</div>
+			</ul>
+		</section>
+	</section>
+
+	<section class="contacts" itemscope itemtype="http://schema.org/Organization">
+		<div class="hidden" itemprop="name">HTML Academy</div>
+		<h1 class="section-title">Остались вопросы?<br/>Свяжитесь с нами!</h1>
+		<ul class="list">
+			<li class="item">
+				<div class="title">Звоните:</div>
+				<a class="value" href="tel:+78125556666" itemprop="telephone">+7 (812) 555-66-66</a>
+			</li>
+			<li class="item">
+				<div class="title">Пишите</div>
+				<a class="value" href="mailto:mail@htmlacademy.ru" itemprop="email">mail@htmlacademy.ru</a>
+			</li>
+			<li  class="item" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<div class="title">Приезжайте в гости</div>
+				<div class="value" itemprop="streetAddress">ул. Большая Конюшенная, 19/8</div>
+			</li>
+		</ul>
+		<div class="map">Тут будет карта</div>
+	</section>
 	<!-- <script src="js/script.js"></script> -->
 </body>
 </html>
