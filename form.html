@@ -30,15 +30,15 @@
 			<fieldset class="fullname">
 				<div class="field  required">
 					<label class="field-title" for="input-name">Имя:<span>*</span></label>
-					<input class="field-text" id="input-name" type="text" name="NAME" value="" placeholder="Введите ваше имя" required="required"/>
+					<input class="field-text" id="input-name" type="text" name="NAME" value="" placeholder="Введите ваше имя" required>
 				</div>
 				<div class="field  required">
 					<label class="field-title" for="input-surname">Фамилия:<span>*</span></label>
-					<input class="field-text" id="input-surname" type="text" name="SURNAME" value="" placeholder="Укажите фамилию" required="required"/>
+					<input class="field-text" id="input-surname" type="text" name="SURNAME" value="" placeholder="Укажите фамилию" required>
 				</div>
 				<div class="field">
 					<label class="field-title" for="input-patronymic">Отчество: <span class="asterisk">*</span></label>
-					<input class="field-text" id="input-patronymic" type="text" name="PATRONYMIC" value="" placeholder="Ну и отчество тоже"/>
+					<input class="field-text" id="input-patronymic" type="text" name="PATRONYMIC" value="" placeholder="Ну и отчество тоже">
 				</div>
 			</fieldset>
 
@@ -46,11 +46,11 @@
 				<div class="field  required">
 					<div class="field-title">С каким приложением путешествовали? <span class="asterisk">*</span></div>
 					<div class="list">
-						<input id="app-ios" type="radio" name="APP" value="iOS" required="required" checked="checked" />
+						<input id="app-ios" type="radio" name="APP" value="iOS" required checked="checked" >
 						<label for="app-ios">Pink для iOS</label>
-						<input id="app-android" type="radio" name="APP" value="Android"/>
+						<input id="app-android" type="radio" name="APP" value="Android">
 						<label for="app-android">Pink для Android</label>
-						<input id="app-windows" type="radio" name="APP" value="WindowsPhone"/>
+						<input id="app-windows" type="radio" name="APP" value="WindowsPhone">
 						<label for="app-windows">Windows Phone</label>
 					</div>
 				</div>
@@ -64,15 +64,15 @@
 				Если к первому полю (Дата выезда), тогда все вообще странно. -->
 
 				<div class="field">
-					<input class="field-text" id="input-date-start" type="text" name="DATESTART" value="" placeholder="1 апреля 2015"/>
+					<input class="field-text" id="input-date-start" type="text" name="DATESTART" value="" placeholder="1 апреля 2015">
 					<label class="field-title" for="input-date-start">Дата выезда</label>
 				</div>
 				<div class="field">
-					<input class="field-text" id="input-date-count" type="number" min="1" name="DATECOUNT" value="" placeholder="10 дней"/>
+					<input class="field-text" id="input-date-count" type="number" min="1" name="DATECOUNT" value="" placeholder="10 дней">
 					<label class="field-title" for="input-date-count">Продолжительность</label>
 				</div>
 				<div class="field">
-					<input class="field-text" id="input-date-end" type="text" name="DATEEND" value="10 апреля 2015" disabled/>
+					<input class="field-text" id="input-date-end" type="text" name="DATEEND" value="10 апреля 2015" disabled>
 					<label class="field-title" for="input-date-end">Дата возвращения</label>
 				</div>
 			</fieldset>
@@ -81,36 +81,36 @@
 			<fieldset class="companions">
 				<div class="field  required">
 					<label class="field-title" for="input-companion-count">Количество попутчиков<span class="asterisk">*</span></label>
-					<input class="field-text" id="input-companion-count" type="number" min="0" name="COMPANIONCOUNT" value="" placeholder="2 чел" required="required"/>
+					<input class="field-text" id="input-companion-count" type="number" min="0" name="COMPANIONCOUNT" value="" placeholder="2 чел" required>
 				</div>
 
 				<div class="list">
 					<div class="item">
 						<div class="field">
 							<div class="field-title">№</div>
-							<input type="number" class="field-text" id="input-companion-id-1" name="COMPANION[1][ID]" value="1" disabled/>
+							<input type="number" class="field-text" id="input-companion-id-1" name="COMPANION[1][ID]" value="1" disabled>
 						</div>
 						<div class="field  required">
 							<label class="field-title" for="input-companion-name-1">Имя<span class="asterisk">*</span></label>
-							<input class="field-text" id="input-companion-name-1" type="text" name="COMPANION[1][NAME]" placeholder="Введите ваше имя" required="required"/>
+							<input class="field-text" id="input-companion-name-1" type="text" name="COMPANION[1][NAME]" placeholder="Введите ваше имя" required>
 						</div>
 						<div class="field">
 							<label class="field-title" for="input-companion-nickname-1">Прозвище:</label>
-							<input class="field-text" id="input-companion-nickname-1" type="text" name="COMPANION[1][NICKNAME]" placeholder="Ну как же без этого!"/>
+							<input class="field-text" id="input-companion-nickname-1" type="text" name="COMPANION[1][NICKNAME]" placeholder="Ну как же без этого!">
 						</div>
 					</div>
 					<div class="item">
 						<div class="field">
 							<div class="field-title">№</div>
-							<input type="number" class="field-text" id="input-companion-id-2" name="COMPANION[2][ID]" value="2" disabled/>
+							<input type="number" class="field-text" id="input-companion-id-2" name="COMPANION[2][ID]" value="2" disabled>
 						</div>
 						<div class="field  required">
 							<label class="field-title" for="input-companion-name-2">Имя<span class="asterisk">*</span></label>
-							<input class="field-text" id="input-companion-name-2" type="text" name="COMPANION[2][NAME]" placeholder="Введите ваше имя" required="required"/>
+							<input class="field-text" id="input-companion-name-2" type="text" name="COMPANION[2][NAME]" placeholder="Введите ваше имя" required>
 						</div>
 						<div class="field">
 							<label class="field-title" for="input-companion-nickname-2">Прозвище:</label>
-							<input class="field-text" id="input-companion-nickname-2" type="text" name="COMPANION[2][NICKNAME]" placeholder="Ну как же без этого!"/>
+							<input class="field-text" id="input-companion-nickname-2" type="text" name="COMPANION[2][NICKNAME]" placeholder="Ну как же без этого!">
 						</div>
 					</div>
 				</div>
@@ -121,17 +121,17 @@
 				<div class="field">
 					<div class="field-title">Ваши безбашенные достижения в путешествии</div>
 					<div class="list">
-						<input id="achievement-ac1" type="checkbox" name="ACHIEVEMENTS[]" value="ac1"/>
+						<input id="achievement-ac1" type="checkbox" name="ACHIEVEMENTS[]" value="ac1">
 						<label for="achievement-ac1">Сделал селфи с акулой</label>
-						<input id="achievement-ac2" type="checkbox" name="ACHIEVEMENTS[]" value="ac2"/>
+						<input id="achievement-ac2" type="checkbox" name="ACHIEVEMENTS[]" value="ac2">
 						<label for="achievement-ac2">Обгорел на пляже</label>
-						<input id="achievement-ac3" type="checkbox" name="ACHIEVEMENTS[]" value="ac3"/>
+						<input id="achievement-ac3" type="checkbox" name="ACHIEVEMENTS[]" value="ac3">
 						<label for="achievement-ac3">Видел Чака Норриса</label>
-						<input id="achievement-ac4" type="checkbox" name="ACHIEVEMENTS[]" value="ac4"/>
+						<input id="achievement-ac4" type="checkbox" name="ACHIEVEMENTS[]" value="ac4">
 						<label for="achievement-ac4">Накупил сувениров</label>
-						<input id="achievement-ac5" type="checkbox" name="ACHIEVEMENTS[]" value="ac5"/>
+						<input id="achievement-ac5" type="checkbox" name="ACHIEVEMENTS[]" value="ac5">
 						<label for="achievement-ac5">Удержал башню</label>
-						<input id="achievement-ac6" type="checkbox" name="ACHIEVEMENTS[]" value="ac6"/>
+						<input id="achievement-ac6" type="checkbox" name="ACHIEVEMENTS[]" value="ac6">
 						<label for="achievement-ac6">Разгромил отель</label>
 					</div>
 				</div>
@@ -140,7 +140,7 @@
 			<fieldset class="photo">
 				<div class="field">
 					<div class="field-title">Ваши фотографии из поездки<span class="asterisk">*</span></div>
-					<input class="field-files" type="file" multiple="multiple" name="files[]" accept="image/*"  required="required"/>
+					<input class="field-files" type="file" multiple="multiple" name="files[]" accept="image/*"  required>
 					<div class="list">
 						<div class="item">
 							<img src="https://api.fnkr.net/testimg/50x50/A22A01/FFF/?text=img-1" alt="img-1.jpg">
