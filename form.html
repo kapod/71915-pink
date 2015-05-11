@@ -28,112 +28,125 @@
 		<form class="form" action="#">
 
 			<fieldset class="fullname">
-				<div class="field  required">
-					<label class="field-title" for="input-name">Имя:<span>*</span></label>
-					<input class="field-text" id="input-name" type="text" name="NAME" value="" placeholder="Введите ваше имя" required>
-				</div>
-				<div class="field  required">
-					<label class="field-title" for="input-surname">Фамилия:<span>*</span></label>
-					<input class="field-text" id="input-surname" type="text" name="SURNAME" value="" placeholder="Укажите фамилию" required>
-				</div>
-				<div class="field">
-					<label class="field-title" for="input-patronymic">Отчество: <span class="asterisk">*</span></label>
-					<input class="field-text" id="input-patronymic" type="text" name="PATRONYMIC" value="" placeholder="Ну и отчество тоже">
-				</div>
+				<label class="field  required">
+					<span class="field-title">Имя:<span class="asterisk">*</span></span>
+					<input class="field-input" type="text" name="NAME" value="" placeholder="Введите ваше имя" required >
+				</label>
+				<label class="field  required">
+					<span class="field-title">Фамилия:<span class="asterisk">*</span></span>
+					<input class="field-input" type="text" name="SURNAME" value="" placeholder="Укажите фамилию" required>
+				</label>
+				<label class="field  required">
+					<span class="field-title">Отчество:<span class="asterisk">*</span></span>
+					<input class="field-input" type="text" name="PATRONYMIC" value="" placeholder="Ну и отчество тоже">
+				</label>
 			</fieldset>
 
 			<fieldset class="app">
 				<div class="field  required">
 					<div class="field-title">С каким приложением путешествовали? <span class="asterisk">*</span></div>
-					<div class="list">
-						<input id="app-ios" type="radio" name="APP" value="iOS" required checked="checked" >
-						<label for="app-ios">Pink для iOS</label>
-						<input id="app-android" type="radio" name="APP" value="Android">
-						<label for="app-android">Pink для Android</label>
-						<input id="app-windows" type="radio" name="APP" value="WindowsPhone">
-						<label for="app-windows">Windows Phone</label>
-					</div>
+
+					<label class="field">
+						<input class="field-input" type="radio" name="APP" value="iOS" required checked="checked" >
+						<span class="field-title">Pink для iOS</span>
+					</label>
+					<label class="field">
+						<input class="field-input" type="radio" name="APP" value="Android">
+						<span class="field-title">Pink для Android</span>
+					</label>
+					<label class="field">
+						<input class="field-input" type="radio" name="APP" value="WindowsPhone">
+						<span class="field-title">Windows Phone</span>
+					</label>
+
 				</div>
 			</fieldset>
 
 
 			<fieldset class="dates">
-				<div class="field-title">Когда вы путешествовали?<span class="asterisk">*</span></div>
-				<!-- Тут я вообще не понял.
-				Если эта надпись относится ко всему блоку, то при чем тут символ "*", символизирующий собой обязательность заполнения (чего?)
-				Если к первому полю (Дата выезда), тогда все вообще странно. -->
+				<div class="field-title">Когда вы путешествовали?</div>
 
-				<div class="field">
-					<input class="field-text" id="input-date-start" type="text" name="DATESTART" value="" placeholder="1 апреля 2015">
-					<label class="field-title" for="input-date-start">Дата выезда</label>
-				</div>
-				<div class="field">
-					<input class="field-text" id="input-date-count" type="number" min="1" name="DATECOUNT" value="" placeholder="10 дней">
-					<label class="field-title" for="input-date-count">Продолжительность</label>
-				</div>
-				<div class="field">
-					<input class="field-text" id="input-date-end" type="text" name="DATEEND" value="10 апреля 2015" disabled>
-					<label class="field-title" for="input-date-end">Дата возвращения</label>
-				</div>
+				<label class="field">
+					<input class="field-input" type="text" name="DATESTART" value="" placeholder="1 апреля 2015">
+					<span class="field-title">Дата выезда</span>
+				</label>
+				<label class="field">
+					<input class="field-input" type="number" min="1" name="DATECOUNT" value="" placeholder="10 дней">
+					<span class="field-title">Продолжительность</span>
+				</label>
+				<label class="field">
+					<input class="field-input" type="text" name="DATEEND" value="10 апреля 2015" readonly>
+					<span class="field-title">Дата возвращения</span>
+				</label>
 			</fieldset>
 
 
 			<fieldset class="companions">
-				<div class="field  required">
-					<label class="field-title" for="input-companion-count">Количество попутчиков<span class="asterisk">*</span></label>
-					<input class="field-text" id="input-companion-count" type="number" min="0" name="COMPANIONCOUNT" value="" placeholder="2 чел" required>
+				<label class="field  required">
+					<span class="field-title">Количество попутчиков<span class="asterisk">*</span></span>
+					<input class="field-input" type="number" min="0" name="COMPANIONCOUNT" value="" placeholder="2 чел" required>
+				</label>
+
+
+				<div class="companion">
+					<label class="field">
+						<span class="field-title">№</span>
+						<span class="field-input">1</span>
+					</label>
+					<label class="field  required">
+						<span class="field-title">Имя<span class="asterisk">*</span></span>
+						<input class="field-input" type="text" name="COMPANION[1][NAME]" placeholder="Введите ваше имя" required>
+					</label>
+					<label class="field  required">
+						<span class="field-title">Прозвище:</span>
+						<input class="field-input" type="text" name="COMPANION[1][NICKNAME]" placeholder="Ну как же без этого!">
+					</label>
+				</div>
+				<div class="companion">
+					<label class="field">
+						<span class="field-title">№</span>
+						<span class="field-input">2</span>
+					</label>
+					<label class="field  required">
+						<span class="field-title">Имя<span class="asterisk">*</span></span>
+						<input class="field-input" type="text" name="COMPANION[2][NAME]" placeholder="Введите ваше имя" required>
+					</label>
+					<label class="field  required">
+						<span class="field-title">Прозвище:</span>
+						<input class="field-input" type="text" name="COMPANION[2][NICKNAME]" placeholder="Ну как же без этого!">
+					</label>
 				</div>
 
-				<div class="list">
-					<div class="item">
-						<div class="field">
-							<div class="field-title">№</div>
-							<input type="number" class="field-text" id="input-companion-id-1" name="COMPANION[1][ID]" value="1" disabled>
-						</div>
-						<div class="field  required">
-							<label class="field-title" for="input-companion-name-1">Имя<span class="asterisk">*</span></label>
-							<input class="field-text" id="input-companion-name-1" type="text" name="COMPANION[1][NAME]" placeholder="Введите ваше имя" required>
-						</div>
-						<div class="field">
-							<label class="field-title" for="input-companion-nickname-1">Прозвище:</label>
-							<input class="field-text" id="input-companion-nickname-1" type="text" name="COMPANION[1][NICKNAME]" placeholder="Ну как же без этого!">
-						</div>
-					</div>
-					<div class="item">
-						<div class="field">
-							<div class="field-title">№</div>
-							<input type="number" class="field-text" id="input-companion-id-2" name="COMPANION[2][ID]" value="2" disabled>
-						</div>
-						<div class="field  required">
-							<label class="field-title" for="input-companion-name-2">Имя<span class="asterisk">*</span></label>
-							<input class="field-text" id="input-companion-name-2" type="text" name="COMPANION[2][NAME]" placeholder="Введите ваше имя" required>
-						</div>
-						<div class="field">
-							<label class="field-title" for="input-companion-nickname-2">Прозвище:</label>
-							<input class="field-text" id="input-companion-nickname-2" type="text" name="COMPANION[2][NICKNAME]" placeholder="Ну как же без этого!">
-						</div>
-					</div>
-				</div>
 			</fieldset>
 
 
 			<fieldset class="achievements">
 				<div class="field">
 					<div class="field-title">Ваши безбашенные достижения в путешествии</div>
-					<div class="list">
-						<input id="achievement-ac1" type="checkbox" name="ACHIEVEMENTS[]" value="ac1">
-						<label for="achievement-ac1">Сделал селфи с акулой</label>
-						<input id="achievement-ac2" type="checkbox" name="ACHIEVEMENTS[]" value="ac2">
-						<label for="achievement-ac2">Обгорел на пляже</label>
-						<input id="achievement-ac3" type="checkbox" name="ACHIEVEMENTS[]" value="ac3">
-						<label for="achievement-ac3">Видел Чака Норриса</label>
-						<input id="achievement-ac4" type="checkbox" name="ACHIEVEMENTS[]" value="ac4">
-						<label for="achievement-ac4">Накупил сувениров</label>
-						<input id="achievement-ac5" type="checkbox" name="ACHIEVEMENTS[]" value="ac5">
-						<label for="achievement-ac5">Удержал башню</label>
-						<input id="achievement-ac6" type="checkbox" name="ACHIEVEMENTS[]" value="ac6">
-						<label for="achievement-ac6">Разгромил отель</label>
-					</div>
+						<label class="field">
+							<span class="field-title">Сделал селфи с акулой</span>
+							<input class="field-input" type="checkbox" name="ACHIEVEMENTS[]" value="ac1">
+						</label>
+						<label class="field">
+							<span class="field-title">Обгорел на пляже</span>
+							<input class="field-input" type="checkbox" name="ACHIEVEMENTS[]" value="ac2">
+						</label>
+						<label class="field">
+							<span class="field-title">Видел Чака Норриса</span>
+							<input class="field-input" type="checkbox" name="ACHIEVEMENTS[]" value="ac3">
+						</label>
+						<label class="field">
+							<span class="field-title">Накупил сувениров</span>
+							<input class="field-input" type="checkbox" name="ACHIEVEMENTS[]" value="ac4">
+						</label>
+						<label class="field">
+							<span class="field-title">Удержал башню</span>
+							<input class="field-input" type="checkbox" name="ACHIEVEMENTS[]" value="ac5">
+						</label>
+						<label class="field">
+							<span class="field-title">Разгромил отель</span>
+							<input class="field-input" type="checkbox" name="ACHIEVEMENTS[]" value="ac6">
+						</label>
 				</div>
 			</fieldset>
 
@@ -142,37 +155,37 @@
 					<div class="field-title">Ваши фотографии из поездки<span class="asterisk">*</span></div>
 					<input class="field-files" type="file" multiple="multiple" name="files[]" accept="image/*"  required>
 					<div class="list">
-						<div class="item">
+						<div class="photo">
 							<img src="https://api.fnkr.net/testimg/50x50/A22A01/FFF/?text=img-1" alt="img-1.jpg">
 							<span class="drop">x</span>
 							<div class="title">img-1.jpg</div>
 						</div>
-						<div class="item">
+						<div class="photo">
 							<img src="https://api.fnkr.net/testimg/50x50/A22A01/FFF/?text=img-2" alt="img-2.jpg">
 							<span class="drop">x</span>
 							<div class="title">img-2.jpg</div>
 						</div>
-						<div class="item">
+						<div class="photo">
 							<img src="https://api.fnkr.net/testimg/50x50/A22A01/FFF/?text=img-3" alt="img-3.jpg">
 							<span class="drop">x</span>
 							<div class="title">img-3.jpg</div>
 						</div>
-						<div class="item">
+						<div class="photo">
 							<img src="https://api.fnkr.net/testimg/50x50/A22A01/FFF/?text=img-4" alt="img-4.jpg">
 							<span class="drop">x</span>
 							<div class="title">img-4.jpg</div>
 						</div>
-						<div class="item">
+						<div class="photo">
 							<img src="https://api.fnkr.net/testimg/50x50/A22A01/FFF/?text=img-5" alt="img-5.jpg">
 							<span class="drop">x</span>
 							<div class="title">img-5.jpg</div>
 						</div>
-						<div class="item">
+						<div class="photo">
 							<img src="https://api.fnkr.net/testimg/50x50/A22A01/FFF/?text=img-6" alt="img-6.jpg">
 							<span class="drop">x</span>
 							<div class="title">img-6.jpg</div>
 						</div>
-						<div class="item">
+						<div class="photo">
 							<img src="https://api.fnkr.net/testimg/50x50/A22A01/FFF/?text=img-7" alt="img-7.jpg">
 							<span class="drop">x</span>
 							<div class="title">img-7.jpg</div>
@@ -181,7 +194,7 @@
 				</div>
 			</fieldset>
 
-			<input type="submit" name="OK" value="Отправить форму">
+			<button type="submit">Отправить форму</button>
 
 			<p class="desc"><span class="asterisk">*</span> — обязательные поля</p>
 		</form>
