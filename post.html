@@ -8,26 +8,26 @@
 </head>
 
 <body>
-	<section class="top-menu">
-		<a class="logo" href="/">PINK</a>
-		<span class="burger">Меню</span>
+	<section class="page-header">
+		<a class="page-header__logo" href="/">PINK</a>
+		<span class="page-header__burger">Меню</span>
 
-		<nav class="menu">
-			<a class="menu-item" href="/form.html">Конкурс</a>
-			<a class="menu-item" href="/blog.html">Блог</a>
+		<nav class="page-header__nav-menu">
+			<a class="page-header__nav-item  page-header__nav-item--active" href="/form.html">Конкурс</a>
+			<a class="page-header__nav-item" href="/blog.html">Блог</a>
 		</nav>
 	</section>
 
-	<section class="intro">
-		<h1 class="section-title">Блог путешественников, пользователей Пинк</h1>
+	<section class="post-intro">
+		<h1 class="post-intro__title">Блог путешественников, пользователей Пинк</h1>
 	</section>
 
 
 	<article class="post">
-		<header>
-			<h1 class="title">Антон и Надя в Тайланде</h1>
-			<p class="date">Опубликовано: 6 месяцев назад</p>
-			<p class="preview">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
+		<header class="post__header">
+			<h1 class="post__title">Антон и Надя в Тайланде</h1>
+			<p class="post__date">Опубликовано: 6 месяцев назад</p>
+			<p class="post__preview">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
 		</header>
 
 		<section>
@@ -59,24 +59,23 @@
 
 	</article>
 
-	<section class="navigation">
-		<a href="#">Пред.</a>
-		<a href="#">След.</a>
-		<a href="/blog.html">Назад к списку</a>
+	<section class="post__navigation">
+		<a class="post__navigation-previous" href="#">Пред.</a>
+		<a class="post__navigation-next" href="#">След.</a>
+		<a class="post__navigation-all" href="/blog.html">Назад к списку</a>
 	</section>
 
-
-	<footer>
-		<section class="footer-logo">
+	<footer class="page-footer">
+		<section class="page-footer__logo">
 			PINK
 		</section>
-		<section class="social">
-			<a class="social-link twitter" href="#">Twitter</a>
-			<a class="social-link facebook" href="#">Facebook</a>
-			<a class="social-link youtube" href="#">YouTube</a>
+		<section class="page-footer__social">
+			<a class="page-footer__social-link  page-footer__social-link--twitter" href="#">Twitter</a>
+			<a class="page-footer__social-link  page-footer__social-link--facebook" href="#">Facebook</a>
+			<a class="page-footer__social-link  page-footer__social-link--youtube" href="#">YouTube</a>
 		</section>
-		<section class="copyright">
-			Разработано <span class="htmlacademy-logo">HTML Academy</span>
+		<section class="page-footer__copyright">
+			Разработано <span class="page-footer__htmlacademy-logo">HTML Academy</span>
 		</section>
 	</footer>
 	<!-- <script src="js/script.js"></script> -->
