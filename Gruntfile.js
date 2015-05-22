@@ -1,81 +1,126 @@
 module.exports = function(grunt) {
 
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-githooks');
-  grunt.loadNpmTasks('grunt-lintspaces');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-githooks');
+	grunt.loadNpmTasks('grunt-lintspaces');
 
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+	require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
-    less: {
-      style: {
-        files: {
-          'css/style.css': 'less/style.less'
-        }
-      }
-    },
+	grunt.initConfig({
+		pkg: grunt.file.readJSON('package.json'),
 
-    sass: {
-      style: {
-        files: {
-          'css/style.css': 'sass/style.scss'
-        }
-      }
-    },
+		less: {
+			style: {
+				files: {
+					'css/style.css': 'less/style.less'
+				}
+			}
+		},
 
-    lintspaces: {
-      test: {
-        src: [
-          '*.html',
-          'js/*.js',
-          'less/*.less',
-          'sass/*.sass'
-        ],
-        options: {
-          editorconfig: '.editorconfig'
-        }
-      }
-    },
+		sass: {
+			style: {
+				files: {
+					'css/style.css': 'sass/style.scss'
+				}
+			}
+		},
 
-    githooks: {
-      test: {
-        'pre-commit': 'lintspaces:test',
-      }
-    },
+		lintspaces: {
+			test: {
+				src: [
+					'*.html',
+					'js/*.js',
+					'less/*.less',
+					'sass/*.sass'
+				],
+				options: {
+					editorconfig: '.editorconfig'
+				}
+			}
+		},
 
-    copy: {
-      gosha: {
-        files: [{
-          expand: true,
-          src: [
-            '*.html',
-            'css/**',
-            'img/**',
-            'js/**'
-          ],
-          dest: 'gosha',
-        }]
-      }
-    },
+		githooks: {
+			test: {
+				'pre-commit': 'lintspaces:test',
+			}
+		},
 
-    clean: {
-      gosha: [
-        'gosha/img/README',
-        'gosha/js/README'
-      ]
-    }
-  });
+		copy: {
+			gosha: {
+				files: [{
+					expand: true,
+					src: [
+						'*.html',
+						'css/**',
+						'img/**',
+						'js/**'
+					],
+					dest: 'gosha',
+				}]
+			}
+		},
 
-  grunt.registerTask('test', ['lintspaces:test']);
+		clean: {
+			gosha: [
+				'gosha/img/README',
+				'gosha/js/README'
+			]
+		},
 
-  if (grunt.file.exists(__dirname, 'less', 'style.less')) {
-    grunt.registerTask('gosha', ['less:style', 'copy:gosha', 'clean:gosha']);
-  } else if (grunt.file.exists(__dirname, 'sass', 'style.scss')) {
-    grunt.registerTask('gosha', ['sass:style', 'copy:gosha', 'clean:gosha']);
-  } else {
-    grunt.registerTask('gosha', ['copy:gosha', 'clean:gosha']);
-  }
+		watch: {
+			styles: {
+				files: ['less/**/*.*'],
+				tasks: ['styles'],
+				options: {
+					spawn: false,
+				}
+			},
+		},
+
+		notify: {
+			less: {
+				options: {
+					title: 'Готово!',
+					message: 'LESS скомпилирован'
+				}
+			},
+			make: {
+				options: {
+					title: 'Готово!',
+					message: 'make завершен!'
+				}
+			},
+		},
+	});
+
+	grunt.registerTask('test', ['lintspaces:test']);
+
+	grunt.registerTask('styles', [
+		'less',
+		'notify:less'
+	]);
+
+	grunt.registerTask('make', [
+		'styles',
+		'notify:make'
+	]);
+
+	grunt.registerTask('default', [
+		'make',
+	]);
+
+	grunt.registerTask('w', [
+		'watch',
+	]);
+
+	if (grunt.file.exists(__dirname, 'less', 'style.less')) {
+		grunt.registerTask('gosha', ['less:style', 'copy:gosha', 'clean:gosha']);
+	} else if (grunt.file.exists(__dirname, 'sass', 'style.scss')) {
+		grunt.registerTask('gosha', ['sass:style', 'copy:gosha', 'clean:gosha']);
+	} else {
+		grunt.registerTask('gosha', ['copy:gosha', 'clean:gosha']);
+	}
 };
