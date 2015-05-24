@@ -1,13 +1,6 @@
 module.exports = function(grunt) {
 
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-less');
-	grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('grunt-githooks');
-	grunt.loadNpmTasks('grunt-lintspaces');
-
-	require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
+	require('load-grunt-tasks')(grunt, {scope: 'dependencies'});
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
