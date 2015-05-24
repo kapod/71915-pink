@@ -1,0 +1,44 @@
+.download {
+	background: #1d2631;
+	padding: 29px 20px 17px;
+
+	&__title {
+		color: #fff;
+		font-size: @fs_title;
+		text-align: center;
+		border: 3px solid #fff;
+		border-radius: 25px;
+	}
+
+	&__list {
+		overflow: hidden;
+		padding: 31px 18px 0px;
+	}
+
+	&__link {
+		display: block;
+		float: left;
+		width: 33%;
+		height: 66px;
+		font-size: 0em;
+		text-indent: -9999;
+
+		&--ios {
+			background: url(../img/apple.png) center no-repeat;
+		}
+		&--android {
+			background: url(../img/android.png) center no-repeat;
+		}
+		&--winphone {
+			background: url(../img/windows.png) center no-repeat;
+		}
+	}
+
+	&__description {
+		font-size: @fs_text;
+		line-height: 23px;
+		font-weight: 300;
+		color: #fff;
+		text-align: center;
+	}
+}

@@ -1,0 +1,47 @@
+.features {
+	padding: 41px 0px 0px;
+
+	&__title {
+		padding: 0px;
+
+		p {
+			margin: 0px;
+			margin-bottom: 31px;
+			font-size: @fs_title_big;
+			line-height: 28px;
+			color: @color_accent_additional;
+			text-align: center;
+			font-weight: 300;
+		}
+
+		&:after {
+			display: block;
+			content: '';
+			height: 35px;
+			background: @bg_additional;
+			background: linear-gradient(354deg, @bg_additional 50%, @bg_main 0%);
+		}
+	}
+
+	&__list {
+		list-style: none;
+		padding: 36px 20px 299px;
+		margin: 0px;
+		background: @bg_additional url(../img/iphone_cut.png) center bottom no-repeat;
+	}
+
+	&__item {
+		line-height: 24px;
+		text-align: center;
+		margin-bottom: 19px;
+	}
+
+	&__item-title {
+		font-size: @fs_title;
+	}
+
+	&__item-text {
+		margin: 0px;
+		font-size: @fs_text;
+	}
+}

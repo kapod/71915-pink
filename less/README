@@ -8,6 +8,7 @@ http://lesscss.org
 
 less/
 | - style.less
+| - layout.less
 | - variables.less
 | - components/
 | - - *.less

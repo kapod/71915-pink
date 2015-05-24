@@ -1,0 +1,33 @@
+.reviews {
+	&__list {
+		margin: 0px;
+		padding: 30px 0px 86px;
+	}
+
+	&__item {
+		display: none;
+		text-align: center;
+		line-height: 30px;
+
+		&--active {
+			display: block;
+		}
+	}
+
+	&__item-name {
+		font-size: @fs_title;
+	}
+
+	&__item-message {
+		font-size: @fs_text;
+		margin: 1px 20px;
+	}
+
+	&:after {
+		display: block;
+		content: '';
+		height: 26px;
+		background: @bg_additional;
+		background: linear-gradient(356deg, @bg_additional 50%, @bg_main 0%);
+	}
+}

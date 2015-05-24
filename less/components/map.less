@@ -1,0 +1,25 @@
+.map {
+	position: relative;
+	height: 200px;
+
+	&:after,
+	&:before {
+		position: absolute;
+		top: 0px;
+		display: block;
+		width: 50%;
+		height: 32px;
+		content: '';
+		background: #fff;
+	}
+
+	&:before {
+		left: 0px;
+		background: linear-gradient(371deg, rgba(0, 0, 0, 0) 50%, #fff 0%);
+	}
+
+	&:after {
+		right: 0px;
+		background: linear-gradient(349deg, rgba(0, 0, 0, 0) 50%, #fff 0%);
+	}
+}

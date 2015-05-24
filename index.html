@@ -4,12 +4,15 @@
 <head>
 	<meta charset="utf-8">
 	<title>Pink</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 	<section class="page-header">
-		<a class="page-header__logo" href="/">PINK</a>
+		<a class="page-header__logo" href="/">
+			<img src="/img/header-logo.png" alt="PINK">
+		</a>
 		<span class="page-header__burger">Меню</span>
 
 		<nav class="page-header__nav-menu">
@@ -24,16 +27,16 @@
 
 	<section class="download">
 		<h1 class="download__title">Скачать приложение</h1>
-		<ul class="download__list">
-			<li class="download__item"><a class="download__link" href="#">AppStore</a></li>
-			<li class="download__item"><a class="download__link" href="#">PlayMarket</a></li>
-			<li class="download__item"><a class="download__link" href="#">WindowsPhoneStore</a></li>
-		</ul>
-		<p>Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8</p>
+		<div class="download__list">
+			<a class="download__link  download__link--ios" href="#" title="AppStore">AppStore</a>
+			<a class="download__link  download__link--android" href="#" title="Play Market">PlayMarket</a>
+			<a class="download__link  download__link--winphone" href="#" title="Windows Phone Store">WindowsPhoneStore</a>
+		</div>
+		<p class="download__description">Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X, Windows&nbsp;8</p>
 	</section>
 
 	<section class="features">
-		<h1 class="features__title">Устали от серости мегаполиса?<br>Нам есть, что вам предложить!</h1>
+		<h1 class="features__title"><p>Устали от серости мегаполиса?</p><p>Нам есть, что вам предложить!</p></h1>
 		<ul class="features__list">
 			<li class="features__item">
 				<h2 class="features__item-title">Поднимает настроение</h2>
@@ -48,83 +51,83 @@
 				<p class="features__item-text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
 			</li>
 		</ul>
-
-		<div class="features__promo-phone">
-			<img src="https://api.fnkr.net/testimg/100x100/D41458/FFF/?text=Phone" alt="Очень симпатичный телефон">
-		</div>
 	</section>
 
 	<section class="reviews">
 		<ul class="reviews__list">
 			<li class="reviews__item  reviews__item--active">
-				<p class="reviews__item-name">Николай Петров</p>
+				<h2 class="reviews__item-name">Николай Петров</h2>
 				<p class="reviews__item-message">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
 			</li>
 			<li class="reviews__item">
-				<p class="reviews__item-name">Иван Иванов</p>
+				<h2 class="reviews__item-name">Иван Иванов</h2>
 				<p class="reviews__item-message">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
 			</li>
 			<li class="reviews__item">
-				<p class="reviews__item-name">Василий Пупкин</p>
+				<h2 class="reviews__item-name">Василий Пупкин</h2>
 				<p class="reviews__item-message">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
 			</li>
 		</ul>
 	</section>
 
 	<section class="prices">
-		<section class="plan">
-			<header class="plan__header">
-				<h2 class="plan__title">База</h2>
-				<div class="plan__price">1,99 USD</div>
-			</header>
-			<ul class="plan__options">
-				<li class="plan__feature  plan__feature--include">Розовый фильтр</li>
-				<li class="plan__feature  plan__feature--exclude">Смайлики</li>
-				<li class="plan__feature  plan__feature--exclude">Комментарии</li>
-			</ul>
-		</section>
-		<section class="plan  plan--hit">
-			<header class="plan__header">
-				<h2 class="plan__title">Стандарт</h2>
-				<div class="plan__price">3,99 USD</div>
-			</header>
-			<ul class="plan__options">
-				<li class="plan__feature  plan__feature--include">Розовый фильтр</li>
-				<li class="plan__feature  plan__feature--include">Смайлики</li>
-				<li class="plan__feature  plan__feature--exclude">Комментарии</li>
-			</ul>
-		</section>
-		<section class="plan">
-			<header class="plan__header">
-				<h2 class="plan__title">Анлим</h2>
-				<div class="plan__price">9,99 USD</div>
-			</header>
-			<ul class="plan__options">
-				<li class="plan__feature  plan__feature--include">Розовый фильтр</li>
-				<li class="plan__feature  plan__feature--include">Смайлики</li>
-				<li class="plan__feature  plan__feature--include">Комментарии</li>
-			</ul>
-		</section>
+		<div class="prices__table">
+			<section class="plan">
+				<header class="plan__header">
+					<h2 class="plan__title">База</h2>
+					<div class="plan__price">1,99 USD</div>
+				</header>
+				<ul class="plan__options">
+					<li class="plan__feature  plan__feature--include">Розовый фильтр</li>
+					<li class="plan__feature  plan__feature--exclude">Смайлики</li>
+					<li class="plan__feature  plan__feature--exclude">Комментарии</li>
+				</ul>
+			</section>
+			<section class="plan  plan--hit">
+				<header class="plan__header">
+					<h2 class="plan__title">Стандарт</h2>
+					<div class="plan__price">3,99 USD</div>
+				</header>
+				<ul class="plan__options">
+					<li class="plan__feature  plan__feature--include">Розовый фильтр</li>
+					<li class="plan__feature  plan__feature--include">Смайлики</li>
+					<li class="plan__feature  plan__feature--exclude">Комментарии</li>
+				</ul>
+			</section>
+			<section class="plan">
+				<header class="plan__header">
+					<h2 class="plan__title">Анлим</h2>
+					<div class="plan__price">9,99 USD</div>
+				</header>
+				<ul class="plan__options">
+					<li class="plan__feature  plan__feature--include">Розовый фильтр</li>
+					<li class="plan__feature  plan__feature--include">Смайлики</li>
+					<li class="plan__feature  plan__feature--include">Комментарии</li>
+				</ul>
+			</section>
+		</div>
 	</section>
 
 	<section class="contacts" itemscope itemtype="http://schema.org/Organization">
-		<div class="contacts__name  hidden" itemprop="name">HTML Academy</div>
+		<div class="contacts__name" itemprop="name">HTML Academy</div>
 		<h1 class="contacts__title">Остались вопросы?<br>Свяжитесь с нами!</h1>
 		<ul class="contacts__list">
 			<li class="contacts__item">
-				<div class="contacts__item-title">Звоните:</div>
+				<h2 class="contacts__item-title">Звоните:</h2>
 				<a   class="contacts__item-value" href="tel:+78125556666" itemprop="telephone">+7 (812) 555-66-66</a>
 			</li>
 			<li class="contacts__item">
-				<div class="contacts__item-title">Пишите</div>
+				<h2 class="contacts__item-title">Пишите:</h2>
 				<a   class="contacts__item-value" href="mailto:mail@htmlacademy.ru" itemprop="email">mail@htmlacademy.ru</a>
 			</li>
 			<li  class="contacts__item" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-				<div class="contacts__item-title">Приезжайте в гости</div>
+				<h2 class="contacts__item-title">Приезжайте в гости:</h2>
 				<div class="contacts__item-value" itemprop="streetAddress">ул. Большая Конюшенная, 19/8</div>
 			</li>
 		</ul>
-		<div class="map">Тут будет карта</div>
+		<div class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.6879737291171!2d30.321330000000014!3d59.936259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTnCsDU2JzEwLjUiTiAzMMKwMTknMTYuOCJF!5e0!3m2!1sru!2sru!4v1432484672490" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+		</div>
 	</section>
 	<!-- <script src="js/script.js"></script> -->
 </body>

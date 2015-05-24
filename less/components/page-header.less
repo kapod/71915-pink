@@ -1,4 +1,58 @@
 .page-header {
+	position: absolute;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 21px 20px;
 	background-color: rgba(0, 0, 0, 0.3);
-	height: 66px;
+
+	&__logo {
+		display: block;
+		float: left;
+		width: 74px;
+		height: 24px;
+	}
+
+	&__burger {
+		display: block;
+		float: right;
+		width: 50px;
+		height: 24px;
+		font-size: 0;
+		text-indent: -99999;
+		cursor: pointer;
+		background: data-uri('../img/burger.png') center no-repeat;
+
+		&--close {
+			background-image: data-uri('../img/burger-close.png');
+			width: 24px;
+		}
+	}
+
+	&__nav-menu {
+		position: absolute;
+		top: 66px;
+		left: 0px;
+		width: 100%;
+
+		display: none;
+
+		&--open {
+			display: block;
+		}
+	}
+
+	&__nav-item {
+		display: block;
+		padding: 20px;
+		font-weight: 700;
+		font-size: @fs_title;
+		text-transform: uppercase;
+		text-align: center;
+		text-decoration: none;
+
+		color: #fff;
+		background: @color_accent_additional;
+		border-bottom: 1px solid #000101;
+		border-top: 1px solid #485461;
+	}
 }
